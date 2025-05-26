@@ -1,10 +1,10 @@
-import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
-import Hero from '@/components/home/Hero';
-import SkillsSection from '@/components/skills/SkillsSection';
-import ProjectsSection from '@/components/projects/ProjectsSection';
-import TimelineSection from '@/components/timeline/TimelineSection';
-import ContactSection from '@/components/contact/ContactSection';
+import Header from "@/components/layout/Header"
+import Footer from "@/components/layout/Footer"
+import Hero from "@/components/home/Hero"
+import SkillsSection from "@/components/skills/SkillsSection"
+import ProjectsSection from "@/components/projects/ProjectsSection"
+import TimelineSection from "@/components/timeline/TimelineSection"
+import ContactSection from "@/components/contact/ContactSection"
 
 export default function Home() {
   return (
@@ -17,5 +17,5 @@ export default function Home() {
       <ContactSection />
       <Footer />
     </main>
-  );
+  )
 }

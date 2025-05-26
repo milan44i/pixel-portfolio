@@ -2,8 +2,10 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
+import marioMushroom from "@/assets/images/mario-mushroom.png"
 
 interface NavItem {
   label: string
@@ -87,19 +89,18 @@ export default function Header() {
       <div className="container mx-auto flex items-center justify-between">
         <Link href="#home" className="flex items-center">
           <motion.div
-            className="w-10 h-10 bg-yellow-500 rounded-full relative overflow-hidden pixel-corners"
+            className="w-10 h-10 relative overflow-hidden"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
           >
-            <div
-              className="absolute inset-0 bg-red-600"
-              style={{
-                clipPath: "polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)",
-              }}
-            ></div>
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-3 h-3 bg-white rounded-full"></div>
-            </div>
+            <Image
+              src={marioMushroom}
+              alt="Mario Mushroom"
+              width={40}
+              height={40}
+              className="object-contain"
+              priority
+            />
           </motion.div>
           <span className="ml-3 text-lg pixel-text text-white">
             Milan Stanković
